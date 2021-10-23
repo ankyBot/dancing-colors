@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>color-box_animation</title>
+    <style>
+      body {
+        box-sizing: border-box;
+        background-color: aliceblue;
+      }
+
+      .container {
+        background-color: #051730;
+        padding: 10px;
+        height: 250px;
+        width: 55%;
+        transform: rotate(180deg);
+        margin: auto;
+        display: flex;
+      }
+
+      .blue {
+        background-color: #7854bc;
+        width: 10rem;
+        height: 10rem;
+        position: relative;
+        animation-name: dance;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: cubic-bezier(0.35, 0.17, 0.43, 0.6);
+        animation-direction: alternate;
+      }
+
+      .purple {
+        background-color: #d152a8;
+        width: 10rem;
+        height: 10rem;
+        position: relative;
+        animation-name: dance;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: cubic-bezier(0.58, 0.31, 0.34, 0.9);
+        animation-direction: alternate;
+      }
+
+      .red {
+        background-color: #fd6485;
+        width: 10rem;
+        height: 10rem;
+        position: relative;
+        animation-name: dance;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: cubic-bezier(0.1, 0.31, 0.34, 1);
+        animation-direction: alternate;
+      }
+
+      .orange {
+        background-color: #ff8a66;
+        width: 10rem;
+        height: 10rem;
+        position: relative;
+        animation-name: dance;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-direction: alternate;
+      }
+
+      .yellow {
+        background-color: #ffbe55;
+        width: 10rem;
+        height: 10rem;
+        position: relative;
+        animation-name: dance;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: cubic-bezier(0.9, 0.1, 0.5, 1);
+        animation-direction: alternate;
+      }
+
+      @keyframes dance {
+        from {
+          height: 100%;
+        }
+        to {
+          height: 0%;
+        }
+      }
+
+      .box {
+        animation-play-state: paused;
+      }
+
+      .myButton {
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+      }
+
+      button {
+        color: white;
+        padding: 0.2rem 0.3rem;
+        margin: 3%;
+        width: 5rem;
+        cursor: pointer;
+      }
+
+      .button-1 {
+        border: 1px solid green;
+        background-color: darkgreen;
+      }
+
+      .button-2 {
+        border: 1px solid red;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- animation-box-container -->
+    <div class="container">
+      <div class="box yellow"></div>
+
+      <div class="box orange"></div>
+
+      <div class="box red"></div>
+
+      <div class="box purple"></div>
+
+      <div class="box blue"></div>
+    </div>
+
+    <!-- start-stop_Buttons -->
+    <div class="myButton">
+      <button class="button-1" onclick="funStart()">Start</button>
+
+      <button class="button-2" onclick="funStop()">Stop</button>
+    </div>
+
+    <script>
+      //animation start function
+      function funStart() {
+        let val = document.getElementsByClassName("box");
+
+        for (let i = 0; i < val.length; i++) {
+          val[i].style["animation-play-state"] = "running";
+        }
+      }
+
+      //animation stop function
+      function funStop() {
+        let val = document.getElementsByClassName("box");
+
+        for (let i = 0; i < val.length; i++) {
+          val[i].style["animation-play-state"] = "paused";
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+body {
+  box-sizing: border-box;
+  background-color: aliceblue;
+}
+
+.container {
+  background-color: #051730;
+  padding: 10px;
+  height: 250px;
+  width: 55%;
+  transform: rotate(180deg);
+  margin: auto;
+  display: flex;
+}
+
+.blue {
+  background-color: #7854bc;
+  width: 150px;
+  height: 150px;
+  position: relative;
+  animation-name: dance;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.35, 0.17, 0.43, 0.6);
+  animation-direction: alternate;
+}
+
+.purple {
+  background-color: #d152a8;
+  width: 150px;
+  height: 150px;
+  position: relative;
+  animation-name: dance;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.58, 0.31, 0.34, 0.9);
+  animation-direction: alternate;
+}
+
+.red {
+  background-color: #fd6485;
+  width: 150px;
+  height: 150px;
+  position: relative;
+  animation-name: dance;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.1, 0.31, 0.34, 1);
+  animation-direction: alternate;
+}
+
+.orange {
+  background-color: #ff8a66;
+  width: 150px;
+  height: 150px;
+  position: relative;
+  animation-name: dance;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+
+.yellow {
+  background-color: #ffbe55;
+  width: 150px;
+  height: 150px;
+  position: relative;
+  animation-name: dance;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.9, 0.1, 0.5, 1);
+  animation-direction: alternate;
+}
+
+@keyframes dance {
+  from {
+    height: 100%;
+  }
+  to {
+    height: 0%;
+  }
+}
+
+.box {
+  animation-play-state: paused;
+}
+
+.myButton {
+  margin-left: 37.5%;
+  margin-top: 25px;
+}
+
+button {
+  width: 5rem;
+  padding: 3px 8px;
+}
+
+.button-1 {
+  display: inline-block;
+  margin-left: 40px;
+  border: 1px solid green;
+  background-color: darkgreen;
+  color: white;
+  cursor: pointer;
+}
+
+.button-2 {
+  display: inline-block;
+  margin: 5px 125px;
+  border: 1px solid red;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+}
